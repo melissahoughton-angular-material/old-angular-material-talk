@@ -1,6 +1,8 @@
-<h1>My Blog</h1>
+<h1 class="mat-display-1">My Blog</h1>
 <mat-card>
     <mat-card-header>
+        <img mat-card-avatar src="https://cdn.pixabay.com/photo/2018/10/11/12/31/black-cat-3739702_1280.jpg"
+            alt="My Photos">
         <mat-card-title>Easy, Breezy, Beautiful</mat-card-title>
         <mat-card-subtitle>Angular Material</mat-card-subtitle>
     </mat-card-header>
@@ -14,8 +16,7 @@
             that.
         </p>
     </mat-card-content>
-    <mat-card-actions>
-        <button mat-button>Like</button>
-        <button mat-button>Read More</button>
+    <mat-card-actions align="end">
+        <button mat-raised-button color="primary" routerLink='/blog'>Read More</button>
     </mat-card-actions>
 </mat-card>

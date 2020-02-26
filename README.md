@@ -73,11 +73,14 @@
 
     This gives us the basis of a flex layout.
 
-Your app is now ready to use angular material. Set up using the components that work best for you. To continue with an example follow the steps in the next section.
+Your app is now ready to use angular material. Set up using the components that work best for you.
+To continue with an example follow the steps in the next section.
 
 ***
 
 # Create an Example Blog App in Angular Material
+
+*This is example is focused on angular material and does not include the angular code required to fully function*
 
 1. Add your first component and set up the route
 
@@ -107,16 +110,12 @@ Your app is now ready to use angular material. Set up using the components that 
         </mat-card-header>
         <mat-card-content>
             <p>
-                This is an amazing blog on angular material. Here is some awesome text about that. Here is some awesome text
-                about that.
-                Here is some awesome text about that. Here is some awesome text about that. Here is some awesome text about
-                that.
-                Here is some awesome text about that. Here is some awesome text about that. Here is some awesome text about
-                that.
+                This is an amazing blog on angular material. Here is some awesome text about that. Here is some awesome text about that.
+                Here is some awesome text about that. Here is some awesome text about that. Here is some awesome text about that.
+                Here is some awesome text about that. Here is some awesome text about that. Here is some awesome text about that.
             </p>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-button>Like</button>
             <button mat-button>Read More</button>
         </mat-card-actions>
     </mat-card>
@@ -124,7 +123,59 @@ Your app is now ready to use angular material. Set up using the components that 
 
 4. Run `ng serve` to see your new app
 
-We can already see some of the material design styles but it is still a bit plain
+    We can already see some of the material design styles but it is still a bit plain. Let's spice things up, follow the next steps
+    and keep `ng serve` running. Check the changes in your browser at each step.
+
+5. Add in the following:
+
+    1. Add `mat-app-background` class to body in `index.html` this changes the background to a color defined in the theme,
+        which defaults to an off-white color
+    2. Add `class="mat-display-1"` to the `<h1>` on the home page
+    3. Change the Read More on the home page into a more defined button by changing `mat-button` to `mat-raised-button color="primary"`
+    4. Add `align="end"` to the `mat-card-actions` element to align the buttons to the right of the card
+    5. Above the card title, add in an avatar:
+        `<img mat-card-avatar src="https://cdn.pixabay.com/photo/2018/10/11/12/31/black-cat-3739702_1280.jpg" alt="My Photos">`
+    6. We want a nice looking header bar, add in `<mat-toolbar class="mat-elevation-z6" color="primary"></mat-toolbar>` outside the
+        container in `app.component.html`
+
+    We now have a nice home page with a fake preview of a blog post
+
+6. Now generate a component for the blog content and setup the route
+    1. Run `ng generate component blog`
+    2. Add in route: `{ path: 'blog', component: BlogComponent }`
+    3. On the Read more button, add `routerLink="/blog"`
+
+7. In `blog.html` add the following:
+
+    ```
+    <h1 >Easy, Breezy, Beautiful</h1>
+    <h2>Angular Material</h2>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+        aliqua. Pellentesque massa placerat duis ultricies. Volutpat ac tincidunt vitae semper quis lectus nulla. Venenatis
+        a condimentum vitae sapien. Et tortor consequat id porta. Consequat nisl vel pretium lectus quam id leo in vitae.
+        Interdum posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Fringilla urna porttitor rhoncus dolor
+        purus non enim praesent. Mattis aliquam faucibus purus in massa tempor nec feugiat. Dolor sed viverra ipsum nunc
+        aliquet bibendum enim facilisis. Fringilla urna porttitor rhoncus dolor purus non enim praesent elementum. Pulvinar
+        pellentesque habitant morbi tristique senectus et netus et. Turpis egestas integer eget aliquet nibh praesent
+        tristique magna sit. Malesuada pellentesque elit eget gravida cum sociis natoque penatibus.
+    </p>
+    <p>
+        Purus ut faucibus pulvinar elementum integer enim neque volutpat. Ornare lectus sit amet est. Varius sit amet mattis
+        vulputate enim nulla. Feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper. Egestas diam in arcu
+        cursus euismod quis viverra nibh cras. Congue eu consequat ac felis donec et. Ullamcorper dignissim cras tincidunt
+        lobortis. At tellus at urna condimentum mattis pellentesque. Eget velit aliquet sagittis id consectetur purus ut
+        faucibus. Odio facilisis mauris sit amet massa vitae. In ornare quam viverra orci sagittis eu. Enim ut sem viverra
+        aliquet eget. Arcu non odio euismod lacinia at. Eget mi proin sed libero enim sed faucibus turpis. Gravida dictum
+        fusce ut placerat orci nulla pellentesque dignissim enim.
+    </p>
+
+
+    <button mat-fab>
+        <mat-icon>thumb_up</mat-icon>
+    </button>
+    ```
 
 ***
 
