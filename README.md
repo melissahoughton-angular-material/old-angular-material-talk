@@ -23,9 +23,10 @@
 
     Remove everything in `app.component.html` except for `<router-outlet></router-outlet>`
 
-3. Create file called `material.module` your `src\app`
+3. Add in the material module
+    Create folder called `material` your `src\app`
 
-    Copy the contents of this file from my [github](https://github.com/melissahoughton/material.module/blob/master/material.module.ts)
+    Copy this file from my [github](https://github.com/melissahoughton/material.module/blob/master/material.module.ts) into the folder
 
 4. Add `MaterialModule` to your app imports
     ```
@@ -52,8 +53,78 @@
     })
     export class AppModule { }
     ```
+6. Add some base styles into your app.
 
+    Wrap the `<router-outlet></router-outlet>` tag in a div with a class `container`
+    The add into your `app.component.scss `
+    ```
+    .container {
+      max-width: 800px;
+      margin: 4em auto;
+      padding: 0 20px;
+    }
 
+    .container>* {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    ```
+
+    This gives us the basis of a flex layout.
+
+Your app is now ready to use angular material. Set up using the components that work best for you. To continue with an example follow the steps in the next section.
+
+***
+
+# Create an Example Blog App in Angular Material
+
+1. Add your first component and set up the route
+
+    Run `ng generate component home`
+
+2. Set up the routes
+
+    Replace the empty routes in `app.routing.module.ts` with
+    ```
+    const routes: Routes = [
+      { path: '', component: HomeComponent },
+      { path: '**', redirectTo: '/', pathMatch: 'full' }
+    ];
+    ```
+
+3. Add in the first material components
+
+   In this example, I am going to set up a blog and want my home page to have card like previews of each post.
+   Add in the following to `home.html` to start setting this up with angular material
+
+   ```
+   <h1>My Blog</h1>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Easy, Breezy, Beautiful</mat-card-title>
+            <mat-card-subtitle>Angular Material</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p>
+                This is an amazing blog on angular material. Here is some awesome text about that. Here is some awesome text
+                about that.
+                Here is some awesome text about that. Here is some awesome text about that. Here is some awesome text about
+                that.
+                Here is some awesome text about that. Here is some awesome text about that. Here is some awesome text about
+                that.
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button>Like</button>
+            <button mat-button>Read More</button>
+        </mat-card-actions>
+    </mat-card>
+   ```
+
+4. Run `ng serve` to see your new app
+
+We can already see some of the material design styles but it is still a bit plain
 
 ***
 
