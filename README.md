@@ -151,26 +151,7 @@ To continue with an example follow the steps in the next section.
     <h1 >Easy, Breezy, Beautiful</h1>
     <h2>Angular Material</h2>
 
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-        aliqua. Pellentesque massa placerat duis ultricies. Volutpat ac tincidunt vitae semper quis lectus nulla. Venenatis
-        a condimentum vitae sapien. Et tortor consequat id porta. Consequat nisl vel pretium lectus quam id leo in vitae.
-        Interdum posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Fringilla urna porttitor rhoncus dolor
-        purus non enim praesent. Mattis aliquam faucibus purus in massa tempor nec feugiat. Dolor sed viverra ipsum nunc
-        aliquet bibendum enim facilisis. Fringilla urna porttitor rhoncus dolor purus non enim praesent elementum. Pulvinar
-        pellentesque habitant morbi tristique senectus et netus et. Turpis egestas integer eget aliquet nibh praesent
-        tristique magna sit. Malesuada pellentesque elit eget gravida cum sociis natoque penatibus.
-    </p>
-    <p>
-        Purus ut faucibus pulvinar elementum integer enim neque volutpat. Ornare lectus sit amet est. Varius sit amet mattis
-        vulputate enim nulla. Feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper. Egestas diam in arcu
-        cursus euismod quis viverra nibh cras. Congue eu consequat ac felis donec et. Ullamcorper dignissim cras tincidunt
-        lobortis. At tellus at urna condimentum mattis pellentesque. Eget velit aliquet sagittis id consectetur purus ut
-        faucibus. Odio facilisis mauris sit amet massa vitae. In ornare quam viverra orci sagittis eu. Enim ut sem viverra
-        aliquet eget. Arcu non odio euismod lacinia at. Eget mi proin sed libero enim sed faucibus turpis. Gravida dictum
-        fusce ut placerat orci nulla pellentesque dignissim enim.
-    </p>
-
+    <p>Here are a bunch of random angular material componets</p>
 
     <button mat-fab>
         <mat-icon>thumb_up</mat-icon>
