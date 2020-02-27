@@ -203,6 +203,19 @@ To continue with an example follow the steps in the next section.
         margin: 8px;
     }
     ```
+
+9. Change to a different built in theme
+
+    In your `angular.json` change the `./node_modules/@angular/material/prebuilt-themes/indigo-pink.css` to
+    `./node_modules/@angular/material/prebuilt-themes/purple-green.css`
+    Take a look at how that changed the components. Angular material has the following built in themes to choose from:
+    - deeppurple-amber.css
+    - indigo-pink.css
+    - pink-bluegrey.css
+    - purple-green.css
+
+    These can also be included into your `styles.scss` using `@import '@angular/material/prebuilt-themes/deeppurple-amber.css';`
+
 ***
 
 # Test
