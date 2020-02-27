@@ -148,16 +148,61 @@ To continue with an example follow the steps in the next section.
 7. In `blog.html` add the following:
 
     ```
-    <h1 >Easy, Breezy, Beautiful</h1>
+    <h1>Easy, Breezy, Beautiful</h1>
     <h2>Angular Material</h2>
 
-    <p>Here are a bunch of random angular material componets</p>
+    <p>Here are some random angular material components</p>
 
-    <button mat-fab>
-        <mat-icon>thumb_up</mat-icon>
-    </button>
+    <div class="flex-container">
+        <div>
+            <button mat-raised-button color="primary">Raised Primary</button>
+            <button mat-raised-button color="accent">Raised Accent</button>
+            <button mat-stroked-button>Basic Stroked</button>
+            <button mat-stroked-button color="primary">Stroked Primary</button>
+        </div>
+
+        <button mat-fab>
+            <mat-icon>thumb_up</mat-icon>
+        </button>
+
+        <mat-radio-group aria-label="Select an option">
+            <mat-radio-button value="1">Option 1</mat-radio-button>
+            <mat-radio-button value="2">Option 2</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-checkbox>Check me!</mat-checkbox>
+
+        <mat-form-field>
+            <mat-label>Choose a date</mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-slider></mat-slider>
+
+
+        <button mat-flat-button color="primary" matTooltip="Info about the action" matTooltipPosition="after"
+            aria-label="Button that displays a tooltip when focused or hovered over">
+            Tooltip
+        </button>
+    </div>
+    <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+
+    <button mat-flat-button color="accent" routerLink="/">Back to home</button>
     ```
+8. In `blog.scss` add the following
+    ```
+    .flex-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
 
+    button {
+        margin: 8px;
+    }
+    ```
 ***
 
 # Test
